@@ -10,8 +10,8 @@ fixture("assert Fixture")
 test("assert test", async t => {
     await t
         .expect(developerName.value).eql('', 'input is empty')
-        .typeText(developerName, "TAU")
-        .expect(developerName.value).eql('TAU', 'input is filled')
+        .typeText(developerName, "mefemefe")
+        .expect(developerName.value).eql('mefemefe', 'input is filled')
         .click(macos)
         .click(submitButton);
 });
