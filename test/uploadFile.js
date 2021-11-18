@@ -9,5 +9,6 @@ fixture("File Upload Fixture")
 test("File upload Test", async t => {
     await t
         .setFilesToUpload(fileUpload, "C:\\Users\\mefe\\Documents\\js\\TestCafe Demo\\upload\\halloween.jpg")
+        // .debug() // enter debug mode
         .click(uploadFileButton);
 })

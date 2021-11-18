@@ -8,8 +8,9 @@ fixture("assert Fixture")
     .page("https://devexpress.github.io/testcafe/example/");
 
 test("assert test", async t => {
+    const developerNameElement = await developerName.with({ visibilityCheck: true })();
     await t
-        .expect(developerName.value).eql('', 'input is empty')
+        .expect(developerNameElement.value).eql('', 'input is empty')
         .typeText(developerName, "TAU")
         .expect(developerName.value).eql('TAU', 'input is filled')
         .click(macos)
